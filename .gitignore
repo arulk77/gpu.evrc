@@ -1,0 +1,7 @@
+reference/*bch*
+.*~
+*.o
+*.exe
+#.*
+#*
+
