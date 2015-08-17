@@ -1,0 +1,19 @@
+/agc.c/1.2/Thu Dec  7 00:02:11 2006//
+/agc.h/1.2/Thu Dec  7 00:02:12 2006//
+/check.c/1.2/Thu Dec  7 00:02:12 2006//
+/check.h/1.2/Thu Dec  7 00:02:12 2006//
+/dtmf.h/1.2/Thu Dec  7 00:02:12 2006//
+/dtmf20ms.c/1.2/Thu Dec  7 00:02:12 2006//
+/dtmf20ms.h/1.2/Thu Dec  7 00:02:12 2006//
+/dtmf_det.c/1.2/Thu Dec  7 00:02:12 2006//
+/dtmf_det.h/1.2/Thu Dec  7 00:02:12 2006//
+/dtmf_gen.c/1.2/Thu Dec  7 00:02:12 2006//
+/dtmf_glob.c/1.2/Thu Dec  7 00:02:12 2006//
+/goertzel.c/1.2/Thu Dec  7 00:02:12 2006//
+/goertzel.h/1.2/Thu Dec  7 00:02:12 2006//
+/init.c/1.2/Thu Dec  7 00:02:12 2006//
+/init.h/1.2/Thu Dec  7 00:02:13 2006//
+/makefile/1.2/Fri Apr 15 03:31:29 2005//
+/tables.c/1.2/Thu Dec  7 00:02:13 2006//
+/tables.h/1.2/Thu Dec  7 00:02:13 2006//
+D

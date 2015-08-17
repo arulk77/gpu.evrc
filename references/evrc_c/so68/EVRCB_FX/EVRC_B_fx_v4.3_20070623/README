@@ -1,0 +1,77 @@
+EVRC-B vocoder fixed point c-simulation can be compiled using the standard GNU c++ compile tools like g++, make, etc. 
+
+COMPILE INSTRUCTIONS
+====================
+The following are the compilation instructions that are applicable to environments like "cygwin" on a PC, or SunOS on unix machine.
+
+1) cd EVRCB_FX/build/
+2) make
+
+Executable produced is "EVRCB_fx" or "EVRCB_fx.exe" in the "EVRCB_FX/build" subfolder.
+
+
+USAGE:
+=======
+Encoder usage:
+--------------
+	EVRCB_fx -i input_speech_file -o encoded_packet_file -X OP=<0 or 1 or 2> -e
+or 
+	EVRCB_fx -i input_speech_file -o encoded_packet_file -W <target_active_speech_channel_adr_in_bps> -e
+Decoder usage:
+--------------
+	EVRCB_fx -i encoded_packet_file -o decoded_output_speech_file -d
+
+
+EVRC-B packet-level dimming c-simulation
+========================================
+The package also contains a folder called "iwf" which contains the software "EVRCB_iwf.cc" which can be compiled (using make) to yield a simulation utility "EVRCB_iwf" whos usage is
+
+EVRCB_iwf usage:
+----------------
+	EVRCB_iwf -s signaling_mask_file -i encoded_packet_file -o encoded_packet_file_with_packet_level_dimming
+
+Where "EVRCB_iwf" converts full-rate frames in the input "encoded_packet_file" to special-half-rate frames at packet-level (that is using a simple scaling down of the packet instead of a complicated transcoding method).
+
+
+SANITY tests for EVRC-B fixed point code Compile Verification
+==============================================================
+To verify compilation, use the contents of the folder "FOURG_FX/test". 
+
+There are two "tcsh" scripts called "do_bit_exact_test", and "do_bit_exact_test_sunos" to verify the compilation on PC/Cygwin, and SunOS environments respectively. 
+There are reference packet, and output files that will be used by the above scripts, and the compiled executable
+
+If the compilation is successful, and good, the above scripts will produce the following messages
+TST0. PKT PASSED
+TSTFER0. OUT PASSED
+TST1. PKT PASSED
+TSTFER1. OUT PASSED
+TST2. PKT PASSED
+TSTFER2. OUT PASSED
+
+If the messages contained the string "FAILED" or "NOT  GENERATED", it means the compilation was faulty, or unsuccessful respectively.
+
+
+EVRC-B fixed point code directory structure
+===========================================
+
+DIRECTORY NAME		-	Description
+--------------------------------------------
+EVRCB_FX/build		-	EVRC-B compile directory
+
+EVRCB_FX/dsp_lib	-	Advanced DSP math library
+
+EVRCB_FX/lib		-	Basic fixed point operator library
+
+EVRCB_FX/src		-	Main EVRC-B vocoder source directory
+
+EVRCB_FX/tab		-	EVRC-B quantization table directory
+
+EVRCB_FX/test		-	Test vector verification directory
+
+EVRCB_FX/tty		-	TTY library (source files *.c, *.h and makefile for TTY/TTD transmission)
+
+EVRCB_FX/dtmf		-	DTMF library (source files *.c, *.h and makefile for DTMF transmission)
+
+EVRCB_FX/iwf		-	EVRC-B Packet Level Signaling InterWorking Function and makefile 
+
+

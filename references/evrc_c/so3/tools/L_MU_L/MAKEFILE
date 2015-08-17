@@ -1,0 +1,21 @@
+CCTARGET=../bin/l_mu_l
+CC=gcc
+CCFLAGS=-g -ansi
+CCLIBS=-lm
+LULOBJECTS=\
+	lul.o\
+	l2m.o\
+	m2l.o
+
+.c.o:
+	${CC} ${CCFLAGS} -c $*.c
+
+all: $(CCTARGET)
+
+$(CCTARGET): $(LULOBJECTS)
+	$(CC) -o $(CCTARGET) $(CCFLAGS) $(LULOBJECTS) $(CCLIBS)
+
+clean:
+	rm -f *.o
+clobber: clean
+	rm -f $(CCTARGET)

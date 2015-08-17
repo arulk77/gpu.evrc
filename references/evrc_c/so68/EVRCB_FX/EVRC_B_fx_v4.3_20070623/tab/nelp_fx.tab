@@ -1,0 +1,235 @@
+/**********************************************************************
+Each of the companies; Qualcomm, and Lucent, and Motorola (hereinafter 
+referred to individually as "Source" or collectively as "Sources") do 
+hereby state:
+
+To the extent to which the Source(s) may legally and freely do so, the 
+Source(s), upon submission of a Contribution, grant(s) a free, 
+irrevocable, non-exclusive, license to the Third Generation Partnership 
+Project 2 (3GPP2) and its Organizational Partners: ARIB, CCSA, TIA, TTA, 
+and TTC, under the Source's copyright or copyright license rights in the 
+Contribution, to, in whole or in part, copy, make derivative works, 
+perform, display and distribute the Contribution and derivative works 
+thereof consistent with 3GPP2's and each Organizational Partner's 
+policies and procedures, with the right to (i) sublicense the foregoing 
+rights consistent with 3GPP2's and each Organizational Partner's  policies 
+and procedures and (ii) copyright and sell, if applicable) in 3GPP2's name 
+or each Organizational Partner's name any 3GPP2 or transposed Publication 
+even though this Publication may contain the Contribution or a derivative 
+work thereof.  The Contribution shall disclose any known limitations on 
+the Source's rights to license as herein provided.
+
+When a Contribution is submitted by the Source(s) to assist the 
+formulating groups of 3GPP2 or any of its Organizational Partners, it 
+is proposed to the Committee as a basis for discussion and is not to 
+be construed as a binding proposal on the Source(s).  The Source(s) 
+specifically reserve(s) the right to amend or modify the material 
+contained in the Contribution. Nothing contained in the Contribution 
+shall, except as herein expressly provided, be construed as conferring 
+by implication, estoppel or otherwise, any license or right under (i) 
+any existing or later issuing patent, whether or not the use of 
+information in the document necessarily employs an invention of any 
+existing or later issued patent, (ii) any copyright, (iii) any 
+trademark, or (iv) any other intellectual property right.
+
+With respect to the Software necessary for the practice of any or 
+all Normative portions of the EVRC-B Variable Rate Speech Codec as 
+it exists on the date of submittal of this form, should the EVRC-B be 
+approved as a Specification or Report by 3GPP2, or as a transposed 
+Standard by any of the 3GPP2's Organizational Partners, the Source(s) 
+state(s) that a worldwide license to reproduce, use and distribute the 
+Software, the license rights to which are held by the Source(s), will 
+be made available to applicants under terms and conditions that are 
+reasonable and non-discriminatory, which may include monetary compensation, 
+and only to the extent necessary for the practice of any or all of the 
+Normative portions of the EVRC-B or the field of use of practice of the 
+EVRC-B Specification, Report, or Standard.  The statement contained above 
+is irrevocable and shall be binding upon the Source(s).  In the event 
+the rights of the Source(s) in and to copyright or copyright license 
+rights subject to such commitment are assigned or transferred, the 
+Source(s) shall notify the assignee or transferee of the existence of 
+such commitments.
+*******************************************************************/
+/*======================================================================*/
+/*  EVRC-B - Enhanced Variable Rate Coder - B Speech Service Option for           */
+/*  Wideband Spread Spectrum Digital System                             */
+/*  C Source Code Simulation                                            */
+/*                                                                      */
+/*  Copyright (C) 2004 Qualcomm Incorporated. All rights                */
+/*  reserved.                                                           */
+/*----------------------------------------------------------------------*/
+/*  Filter coefficients  for NELP  encoder and decoder functions                       */
+/*======================================================================*/
+
+
+Word16 bp1_num_coef_fx[13]={ // Q-12
+1390,
+0,
+-8338,
+0,
+20844,
+0,
+-27792,
+0,
+20844,
+0,
+-8338,
+0,
+1390,
+};
+
+Word16 bp1_den_coef_fx[13]={ // Q-12
+  4096,
+-1782,
+-15515,
+5275,
+25931,
+-6644,
+-24024,
+4358,
+12897,
+-1476,
+-3782,
+205,
+471,
+};
+
+Word16 shape1_num_coef_fx[11]={ // Q-15
+31437,
+-2443,
+-13636,
+4316,
+-10188,
+48,
+2639,
+-3575,
+-776,
+1046,
+399,
+};
+
+Word16 shape1_den_coef_fx[11]={ // Q-15
+  32767,  
+2940,
+-12237,
+4032,
+-9609,
+-1998,
+2335,
+-3900,
+-1595,
+857,
+253,
+};
+
+Word16 shape2_num_coef_fx[11]={ // Q-15
+30760,
+31,
+-9699,
+9516,
+-5878,
+-7249,
+-10468,
+442,
+3278,
+-63,
+1115,
+};
+
+Word16 shape2_den_coef_fx[11]={ // Q-15
+  32767,  
+16019,
+-890,
+12799,
+2346,
+-6985,
+-13192,
+-5795,
+-949,
+-1492,
+-304,
+};
+
+Word16 shape3_num_coef_fx[11]={ // Q-15
+30685,
+-383,
+-9937,
+-9605,
+-5997,
+7611,
+-10393,
+-355,
+3239,
+12,
+1196,
+};
+
+Word16 shape3_den_coef_fx[11]={ // Q-15
+  32767,
+-16498,
+-911,
+-12947,
+2286,
+7430,
+-13385,
+6066,
+-1182,
+1580,
+-273,
+};
+
+Word16 txlpf1_num_coef_fx[11]={ // Q-13
+138,
+198,
+514,
+681,
+921,
+964,
+921,
+681,
+514,
+198,
+138,
+};
+
+Word16 txlpf1_den_coef_fx[11]={ // Q-13
+  8192,  
+-18945,
+31613,
+-31149,
+24494,
+-12753,
+5528,
+-1436,
+347,
+-25,
+4,
+};
+
+Word16 txhpf1_num_coef_fx[11]={ // Q-13
+138,
+-198,
+514,
+-681,
+921,
+-964,
+921,
+-681,
+514,
+-198,
+138,
+};
+
+Word16 txhpf1_den_coef_fx[11]={ // Q-13
+  8192,  
+18945,
+31613,
+31149,
+24494,
+12753,
+5528,
+1436,
+347,
+25,
+4,
+};

@@ -1,0 +1,12 @@
+#!/bin/tcsh 
+foreach i ({0,1,2})
+
+../build/EvrcB_fx -i smv12s15_small -o gold.$i.pkt -X OP=$i -e
+../build/EvrcB_fx -i gold.$i.pkt -o gold.$i.out -d
+/usr2/apadmana/fersig -c 4GV -e /usr2/apadmana/fer_5%.bin gold.$i.pkt goldfer.$i.pkt
+../build/EvrcB_fx -i goldfer.$i.pkt -o goldfer.$i.out -d
+dd of=gold.$i.pkt.sunos if=gold.$i.pkt conv=swab
+dd of=goldfer.$i.pkt.sunos if=goldfer.$i.pkt conv=swab
+dd of=goldfer.$i.out.sunos if=goldfer.$i.out conv=swab
+
+end

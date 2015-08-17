@@ -1,0 +1,225 @@
+/**********************************************************************
+Each of the companies; Qualcomm, and Lucent, and Motorola (hereinafter 
+referred to individually as "Source" or collectively as "Sources") do 
+hereby state:
+
+To the extent to which the Source(s) may legally and freely do so, the 
+Source(s), upon submission of a Contribution, grant(s) a free, 
+irrevocable, non-exclusive, license to the Third Generation Partnership 
+Project 2 (3GPP2) and its Organizational Partners: ARIB, CCSA, TIA, TTA, 
+and TTC, under the Source's copyright or copyright license rights in the 
+Contribution, to, in whole or in part, copy, make derivative works, 
+perform, display and distribute the Contribution and derivative works 
+thereof consistent with 3GPP2's and each Organizational Partner's 
+policies and procedures, with the right to (i) sublicense the foregoing 
+rights consistent with 3GPP2's and each Organizational Partner's  policies 
+and procedures and (ii) copyright and sell, if applicable) in 3GPP2's name 
+or each Organizational Partner's name any 3GPP2 or transposed Publication 
+even though this Publication may contain the Contribution or a derivative 
+work thereof.  The Contribution shall disclose any known limitations on 
+the Source's rights to license as herein provided.
+
+When a Contribution is submitted by the Source(s) to assist the 
+formulating groups of 3GPP2 or any of its Organizational Partners, it 
+is proposed to the Committee as a basis for discussion and is not to 
+be construed as a binding proposal on the Source(s).  The Source(s) 
+specifically reserve(s) the right to amend or modify the material 
+contained in the Contribution. Nothing contained in the Contribution 
+shall, except as herein expressly provided, be construed as conferring 
+by implication, estoppel or otherwise, any license or right under (i) 
+any existing or later issuing patent, whether or not the use of 
+information in the document necessarily employs an invention of any 
+existing or later issued patent, (ii) any copyright, (iii) any 
+trademark, or (iv) any other intellectual property right.
+
+With respect to the Software necessary for the practice of any or 
+all Normative portions of the EVRC-B Variable Rate Speech Codec as 
+it exists on the date of submittal of this form, should the EVRC-B be 
+approved as a Specification or Report by 3GPP2, or as a transposed 
+Standard by any of the 3GPP2's Organizational Partners, the Source(s) 
+state(s) that a worldwide license to reproduce, use and distribute the 
+Software, the license rights to which are held by the Source(s), will 
+be made available to applicants under terms and conditions that are 
+reasonable and non-discriminatory, which may include monetary compensation, 
+and only to the extent necessary for the practice of any or all of the 
+Normative portions of the EVRC-B or the field of use of practice of the 
+EVRC-B Specification, Report, or Standard.  The statement contained above 
+is irrevocable and shall be binding upon the Source(s).  In the event 
+the rights of the Source(s) in and to copyright or copyright license 
+rights subject to such commitment are assigned or transferred, the 
+Source(s) shall notify the assignee or transferee of the existence of 
+such commitments.
+*******************************************************************/
+/*======================================================================*/
+/*  EVRC-B - Enhanced Variable Rate Coder - B Speech Service Option for           */
+/*  Wideband Spread Spectrum Digital System                             */
+/*  C Source Code Simulation                                            */
+/*                                                                      */
+/*  Copyright (C) 2004 Qualcomm Incorporated. All rights                */
+/*  reserved.                                                           */
+/*----------------------------------------------------------------------*/
+/* LSP Quantization Tables                                              */
+/*----------------------------------------------------------------------*/
+/* Rate 1/8 */
+short lsptab8_fx[160]={
+  1379,
+  2277,
+  3660,
+  4775,
+  6846,
+  1800,
+  3219,
+  3607,
+  5207,
+  6733,
+  1481,
+  2464,
+  3743,
+  5069,
+  6471,
+  1621,
+  2611,
+  4119,
+  5552,
+  6808,
+  1369,
+  2079,
+  3954,
+  5194,
+  6687,
+  1545,
+  2593,
+  3992,
+  5128,
+  7310,
+  1787,
+  2633,
+  4243,
+  4976,
+  6610,
+  1830,
+  3084,
+  4593,
+  5835,
+  7522,
+  1489,
+  2410,
+  3912,
+  5060,
+  6885,
+  2070,
+  3121,
+  4052,
+  5791,
+  7125,
+  1729,
+  2764,
+  3798,
+  5174,
+  6794,
+  1700,
+  2665,
+  4508,
+  6004,
+  7091,
+  1456,
+  2257,
+  4298,
+  5329,
+  7097,
+  1618,
+  2683,
+  4282,
+  5512,
+  7581,
+  1832,
+  2975,
+  4374,
+  5341,
+  6869,
+  2011,
+  3231,
+  4847,
+  6319,
+  7588,
+  8789,
+  10022,
+  10194,
+  12066,
+  13361,
+  8001,
+  9493,
+  10674,
+  12787,
+  13548,
+  7649,
+  9856,
+  10779,
+  12634,
+  13457,
+  8489,
+  9751,
+  11206,
+  12626,
+  13532,
+  7959,
+  9576,
+  10721,
+  12382,
+  13216,
+  8085,
+  9748,
+  11020,
+  12919,
+  13847,
+  7005,
+  10859,
+  11163,
+  12525,
+  13415,
+  8740,
+  10090,
+  11279,
+  12980,
+  13890,
+  8559,
+  9992,
+  10813,
+  12611,
+  13770,
+  8177,
+  9625,
+  10939,
+  12403,
+  13669,
+  7916,
+  9887,
+  11183,
+  12592,
+  13638,
+  8460,
+  10399,
+  11437,
+  12704,
+  13616,
+  8012,
+  10051,
+  11003,
+  12401,
+  13290,
+  8246,
+  10232,
+  11091,
+  12961,
+  13893,
+  7467,
+  10413,
+  11086,
+  13122,
+  13496,
+  9141,
+  10572,
+  11684,
+  13175,
+  13884};
+

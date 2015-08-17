@@ -1,0 +1,15 @@
+all:
+	make -C ../avg_rate
+	make -C ../l_mu_l
+	make -C ../sv56
+
+clean:
+	make -C ../avg_rate clean
+	make -C ../l_mu_l clean
+	make -C ../sv56 clean
+
+clobber:
+	make -C ../avg_rate clobber
+	make -C ../l_mu_l clobber
+	make -C ../sv56 clobber
+

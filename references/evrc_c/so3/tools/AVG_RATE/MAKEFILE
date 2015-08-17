@@ -1,0 +1,15 @@
+TARGET=../bin/avg_rate
+CC=gcc
+CCFLAGS=-O3 -Wall -ansi
+
+.c.o:
+	${CC} ${CCFLAGS} -c $*.c
+
+all : $(TARGET)
+
+$(TARGET) : avg_rate.o 
+	${CC} avg_rate.o -o $(TARGET)
+clean:
+	rm -f *.o
+clobber: clean
+	rm -f $(TARGET)

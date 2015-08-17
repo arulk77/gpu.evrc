@@ -1,0 +1,38 @@
+#!/bin/tcsh 
+foreach i ({0,1,2})
+
+../build/EvrcB_fx -i smv12s15_small.sunos -o tst.$i.pkt -X OP=$i -e
+../build/EvrcB_fx -i goldfer.$i.pkt.sunos -o tstfer.$i.out -d
+
+end
+
+foreach i ({0,1,2})
+if (-f tst.$i.pkt) then
+	cmp tst.$i.pkt gold.$i.pkt.sunos >! /tmp/err.bin
+	set x=`ls -l /tmp/err.bin|awk '{print $5}'`
+	if ($x == 0) then
+		echo TST$i. PKT PASSED
+	else
+		echo "                                   " TST$i. PKT FAILED
+	endif
+
+else
+	echo TST$i. PKT NOT GENERATED
+endif
+
+if (-f tstfer.$i.out) then
+	cmp tstfer.$i.out goldfer.$i.out.sunos >! /tmp/err.bin
+	set x=`ls -l /tmp/err.bin|awk '{print $5}'`
+	if ($x == 0) then
+		echo TSTFER$i. OUT PASSED
+	else
+		echo "                                   " TSTFER$i. OUT FAILED
+	endif
+
+else
+	echo TSTFER$i. OUT NOT GENERATED
+endif
+
+end
+
+rm tst*.*
